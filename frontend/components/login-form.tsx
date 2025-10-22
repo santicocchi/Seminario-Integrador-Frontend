@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Eye, EyeOff, Mail, Lock } from "lucide-react"
+import {login} from "@/services/authService";
+import { set } from "date-fns"
 
 // Formulario de inicio de sesión
 // Permite al usuario ingresar con email y contraseña
@@ -18,11 +20,36 @@ export function LoginForm() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+   // Estado para el mensaje
+  const [mensaje, setMensaje] = useState("");
+  const [errorMensaje, setErrorMensaje] = useState("");
+
+
   // Función que se ejecuta al enviar el formulario
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     // Aquí conectarás con tu backend para autenticar al usuario
-    console.log("Intento de login:", { email, password })
+    try{
+      const result = await login({email, password});
+      // Guardar correctamente el token
+      localStorage.setItem("token", result.accessToken);
+      
+      console.log("Inicio de sesión exitoso:", result);
+
+      // Mostrar mensaje en pantalla
+       setMensaje("Inicio de sesión exitoso");
+        setErrorMensaje(""); // Limpiar mensaje de error
+       
+
+      
+      // Redirigir o actualizar UI según sea necesario
+    } catch (error) {
+      console.error("Error en el inicio de sesión:", error);
+       // Mostrar mensaje de error
+       setErrorMensaje("Credenciales inválidas. Por favor, inténtalo de nuevo.");
+       setMensaje(""); // Limpiar mensaje de éxito
+       setMensaje(""); // Limpiar mensaje de éxito
+    }
   }
 
   return (
@@ -93,6 +120,16 @@ export function LoginForm() {
       >
         Iniciar Sesión
       </Button>
+
+      {mensaje && (
+      <div className="mt-4 mx-auto w-full max-w-md border border-green-500 bg-green-100 text-green-800 px-4 py-2 rounded text-center font-semibold shadow-sm">
+      {mensaje}
+      </div>)}
+
+      {errorMensaje && (
+      <div className="mt-4 mx-auto w-full max-w-md border border-red-500 bg-red-100 text-red-800 px-4 py-2 rounded text-center font-semibold shadow-sm">
+      {errorMensaje}
+      </div>)}
 
       {/* Divisor */}
       <div className="relative">
