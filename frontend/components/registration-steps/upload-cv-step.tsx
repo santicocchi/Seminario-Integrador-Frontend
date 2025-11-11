@@ -16,6 +16,7 @@ interface UploadCVStepProps {
 export function UploadCVStep({ formData, updateFormData, onNext, onBack }: UploadCVStepProps) {
   const [fileName, setFileName] = useState<string | null>(null)
 
+  // Función para manejar el cambio de archivo
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
@@ -24,7 +25,10 @@ export function UploadCVStep({ formData, updateFormData, onNext, onBack }: Uploa
     }
   }
 
+  // Función para finalizar el registro
   const handleFinish = () => {
+    // Cuando descargues el proyecto, aquí deberás agregar la llamada a la API
+    console.log("Datos del formulario:", formData)
     onNext()
   }
 

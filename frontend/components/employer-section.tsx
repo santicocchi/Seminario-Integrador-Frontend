@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Button } from "@/components/ui/button"
 import { Building2, Users, MessageSquare, ArrowRight } from "lucide-react"
 
 export function EmployerSection() {
@@ -29,9 +28,6 @@ export function EmployerSection() {
     <section id="publicar" ref={sectionRef} className="py-24 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 fade-in-up">
-          <Button variant="outline" className="mb-6 rounded-full bg-transparent">
-            ¿Querés publicar una oferta?
-          </Button>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
             ¡Publicá tus ofertas de trabajo!
           </h2>

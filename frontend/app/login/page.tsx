@@ -25,7 +25,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-sm text-muted-foreground">
               ¿No tienes cuenta?{" "}
-              <Link href="/" className="text-secondary font-semibold hover:underline">
+              <Link href="/registro" className="text-secondary font-semibold hover:underline">
                 Regístrate gratis
               </Link>
             </p>

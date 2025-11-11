@@ -31,27 +31,27 @@ export function Footer() {
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                  Ejemplo
+                  Términos y Condiciones
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                  Hola
+                  
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                  Cómo funciona
+                   Villa María, Córdoba
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                  Estas
+                  Av. Universidad 1345
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-white/70 hover:text-white transition-colors">
-                  Bla
+                  
                 </Link>
               </li>
               <li>
@@ -74,7 +74,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                 >
                   <Instagram className="h-5 w-5" />
-                  Instagram
+                  vmtrabaja.vm
                 </a>
               </li>
               <li>
@@ -87,7 +87,7 @@ export function Footer() {
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                   </svg>
-                  X
+                  vmtrabaja.vm
                 </a>
               </li>
               <li>
@@ -96,7 +96,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                 >
                   <Mail className="h-5 w-5" />
-                  Email
+                  vmtrabaja@gmail.com
                 </a>
               </li>
               <li>
@@ -105,7 +105,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-white/70 hover:text-white transition-colors"
                 >
                   <Phone className="h-5 w-5" />
-                  Número de teléfono
+                  3534093935
                 </a>
               </li>
             </ul>

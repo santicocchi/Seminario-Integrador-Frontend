@@ -38,10 +38,10 @@ export function Header() {
             >
               Inicio
             </a>
-            <Link href="#publicar" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link href="/publicar-oferta" className="text-foreground hover:text-primary transition-colors font-medium">
               Publicar ofertas de trabajo
             </Link>
-            <Link href="#buscar" className="text-foreground hover:text-primary transition-colors font-medium">
+            <Link href="/buscar-ofertas" className="text-foreground hover:text-primary transition-colors font-medium">
               Buscar ofertas de trabajo
             </Link>
           </nav>
@@ -58,9 +58,8 @@ export function Header() {
               </Button>
             </Link>
 
-            {/* Botón para ir al registro */}
             <Link href="/registro">
-              <Button className="bg-secondary hover:bg-secondary/90 text-white font-semibold shadow-md hover:shadow-lg transition-all">
+              <Button className="bg-white hover:bg-primary text-primary hover:text-white font-semibold shadow-md hover:shadow-lg transition-all border-2 border-primary">
                 Registrarse
               </Button>
             </Link>

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { UserPlus, Briefcase, Bell } from "lucide-react"
+import Link from "next/link"
 
 export function JobSeekerSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -82,8 +83,9 @@ export function JobSeekerSection() {
           <Button
             size="lg"
             className="bg-primary hover:bg-primary/90 text-white font-bold text-lg px-10 py-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+            asChild
           >
-            Creá tu cuenta gratis
+            <Link href="/registro">Creá tu cuenta gratis</Link>
           </Button>
         </div>
       </div>
